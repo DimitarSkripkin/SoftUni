@@ -38,9 +38,11 @@ namespace _04.Binary_Search {
 			//Array.Sort( numbers );
 			int value = int.Parse( Console.ReadLine() );
 
-			int atPos = BinarySearch( numbers, value );
-			//int atPos = LinearSearch( numbers, value );
-			Console.WriteLine( atPos );
+			int atPosBin = BinarySearch( numbers, value );
+			int atPosLinear = LinearSearch( numbers, value );
+
+			Console.WriteLine( atPosBin );
+			Console.WriteLine( atPosLinear );
 			//Console.WriteLine( "value {0} at pos {1}", value, atPos );
 		}
 	}

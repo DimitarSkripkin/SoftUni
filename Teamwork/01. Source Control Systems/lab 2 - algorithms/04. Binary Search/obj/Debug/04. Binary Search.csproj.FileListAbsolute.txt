@@ -4,3 +4,6 @@ D:\VS Projects\lab 2 - algorithms\04. Binary Search\bin\Debug\_04.Binary_Search.
 D:\VS Projects\lab 2 - algorithms\04. Binary Search\obj\Debug\04. Binary Search.csprojResolveAssemblyReference.cache
 D:\VS Projects\lab 2 - algorithms\04. Binary Search\obj\Debug\_04.Binary_Search.exe
 D:\VS Projects\lab 2 - algorithms\04. Binary Search\obj\Debug\_04.Binary_Search.pdb
+C:\Users\ACER ASPIRE\Desktop\homework teamwork\Teamwork\01. Source Control Systems\lab 2 - algorithms\04. Binary Search\bin\Debug\_04.Binary_Search.exe.config
+C:\Users\ACER ASPIRE\Desktop\homework teamwork\Teamwork\01. Source Control Systems\lab 2 - algorithms\04. Binary Search\obj\Debug\_04.Binary_Search.exe
+C:\Users\ACER ASPIRE\Desktop\homework teamwork\Teamwork\01. Source Control Systems\lab 2 - algorithms\04. Binary Search\obj\Debug\_04.Binary_Search.pdb
