@@ -9,9 +9,7 @@ namespace _03.Insertion_Sort {
 		static void Main( string[] args ) {
 			int[] numbers = Console.ReadLine().Split( ' ' ).Select( int.Parse ).ToArray();
 
-			//int selected;
 			for ( int i = 1; i < numbers.Length; ++i ) {
-				//selected = numbers[ i ];
 				int j = i;
 				while ( j > 0 && numbers[ j - 1 ] > numbers[ j ] ) {
 					int temp = numbers[ j - 1 ];
