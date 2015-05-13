@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2013 for Windows Desktop
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Prime Factorization", "01. Prime Factorization\01. Prime Factorization.csproj", "{6FBDB970-A143-489D-BCB9-F6186F67426F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. The Sieve of Eratosthenes", "02. The Sieve of Eratosthenes\02. The Sieve of Eratosthenes.csproj", "{F1AA4BA4-47E3-4B65-9D73-78E87A8B1B58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Insertion Sort", "03. Insertion Sort\03. Insertion Sort.csproj", "{FA248858-E44C-4111-B4BD-958D8182FDCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Binary Search", "04. Binary Search\04. Binary Search.csproj", "{D7042A02-6E31-4E96-8AF3-ED4D76E35889}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6FBDB970-A143-489D-BCB9-F6186F67426F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FBDB970-A143-489D-BCB9-F6186F67426F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FBDB970-A143-489D-BCB9-F6186F67426F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FBDB970-A143-489D-BCB9-F6186F67426F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1AA4BA4-47E3-4B65-9D73-78E87A8B1B58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1AA4BA4-47E3-4B65-9D73-78E87A8B1B58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1AA4BA4-47E3-4B65-9D73-78E87A8B1B58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1AA4BA4-47E3-4B65-9D73-78E87A8B1B58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA248858-E44C-4111-B4BD-958D8182FDCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA248858-E44C-4111-B4BD-958D8182FDCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA248858-E44C-4111-B4BD-958D8182FDCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA248858-E44C-4111-B4BD-958D8182FDCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7042A02-6E31-4E96-8AF3-ED4D76E35889}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7042A02-6E31-4E96-8AF3-ED4D76E35889}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7042A02-6E31-4E96-8AF3-ED4D76E35889}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7042A02-6E31-4E96-8AF3-ED4D76E35889}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

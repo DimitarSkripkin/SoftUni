@@ -1,0 +1,6 @@
+D:\VS Projects\lab 2 - algorithms\01. Prime Factorization\bin\Debug\_01.Prime_Factorization.exe.config
+D:\VS Projects\lab 2 - algorithms\01. Prime Factorization\bin\Debug\_01.Prime_Factorization.exe
+D:\VS Projects\lab 2 - algorithms\01. Prime Factorization\bin\Debug\_01.Prime_Factorization.pdb
+D:\VS Projects\lab 2 - algorithms\01. Prime Factorization\obj\Debug\01. Prime Factorization.csprojResolveAssemblyReference.cache
+D:\VS Projects\lab 2 - algorithms\01. Prime Factorization\obj\Debug\_01.Prime_Factorization.exe
+D:\VS Projects\lab 2 - algorithms\01. Prime Factorization\obj\Debug\_01.Prime_Factorization.pdb

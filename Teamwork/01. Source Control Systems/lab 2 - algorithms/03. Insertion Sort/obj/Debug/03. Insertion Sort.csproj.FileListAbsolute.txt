@@ -1,0 +1,5 @@
+D:\VS Projects\lab 2 - algorithms\03. Insertion Sort\bin\Debug\_03.Insertion_Sort.exe.config
+D:\VS Projects\lab 2 - algorithms\03. Insertion Sort\bin\Debug\_03.Insertion_Sort.exe
+D:\VS Projects\lab 2 - algorithms\03. Insertion Sort\bin\Debug\_03.Insertion_Sort.pdb
+D:\VS Projects\lab 2 - algorithms\03. Insertion Sort\obj\Debug\_03.Insertion_Sort.exe
+D:\VS Projects\lab 2 - algorithms\03. Insertion Sort\obj\Debug\_03.Insertion_Sort.pdb
