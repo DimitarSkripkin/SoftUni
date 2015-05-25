@@ -1,0 +1,403 @@
+  0 Linux kernel release 4.x <http://kernel.org/>
+  1 
+  2 These are the release notes for Linux version 4.  Read them carefully,
+  3 as they tell you what this is all about, explain how to install the
+  4 kernel, and what to do if something goes wrong. 
+  5 
+  6 WHAT IS LINUX?
+  7 
+  8   Linux is a clone of the operating system Unix, written from scratch by
+  9   Linus Torvalds with assistance from a loosely-knit team of hackers across
+ 10   the Net. It aims towards POSIX and Single UNIX Specification compliance.
+ 11 
+ 12   It has all the features you would expect in a modern fully-fledged Unix,
+ 13   including true multitasking, virtual memory, shared libraries, demand
+ 14   loading, shared copy-on-write executables, proper memory management,
+ 15   and multistack networking including IPv4 and IPv6.
+ 16 
+ 17   It is distributed under the GNU General Public License - see the
+ 18   accompanying COPYING file for more details. 
+ 19 
+ 20 ON WHAT HARDWARE DOES IT RUN?
+ 21 
+ 22   Although originally developed first for 32-bit x86-based PCs (386 or higher),
+ 23   today Linux also runs on (at least) the Compaq Alpha AXP, Sun SPARC and
+ 24   UltraSPARC, Motorola 68000, PowerPC, PowerPC64, ARM, Hitachi SuperH, Cell,
+ 25   IBM S/390, MIPS, HP PA-RISC, Intel IA-64, DEC VAX, AMD x86-64, AXIS CRIS,
+ 26   Xtensa, Tilera TILE, AVR32 and Renesas M32R architectures.
+ 27 
+ 28   Linux is easily portable to most general-purpose 32- or 64-bit architectures
+ 29   as long as they have a paged memory management unit (PMMU) and a port of the
+ 30   GNU C compiler (gcc) (part of The GNU Compiler Collection, GCC). Linux has
+ 31   also been ported to a number of architectures without a PMMU, although
+ 32   functionality is then obviously somewhat limited.
+ 33   Linux has also been ported to itself. You can now run the kernel as a
+ 34   userspace application - this is called UserMode Linux (UML).
+ 35 
+ 36 DOCUMENTATION:
+ 37 
+ 38  - There is a lot of documentation available both in electronic form on
+ 39    the Internet and in books, both Linux-specific and pertaining to
+ 40    general UNIX questions.  I'd recommend looking into the documentation
+ 41    subdirectories on any Linux FTP site for the LDP (Linux Documentation
+ 42    Project) books.  This README is not meant to be documentation on the
+ 43    system: there are much better sources available.
+ 44 
+ 45  - There are various README files in the Documentation/ subdirectory:
+ 46    these typically contain kernel-specific installation notes for some 
+ 47    drivers for example. See Documentation/00-INDEX for a list of what
+ 48    is contained in each file.  Please read the Changes file, as it
+ 49    contains information about the problems, which may result by upgrading
+ 50    your kernel.
+ 51 
+ 52  - The Documentation/DocBook/ subdirectory contains several guides for
+ 53    kernel developers and users.  These guides can be rendered in a
+ 54    number of formats:  PostScript (.ps), PDF, HTML, & man-pages, among others.
+ 55    After installation, "make psdocs", "make pdfdocs", "make htmldocs",
+ 56    or "make mandocs" will render the documentation in the requested format.
+ 57 
+ 58 INSTALLING the kernel source:
+ 59 
+ 60  - If you install the full sources, put the kernel tarball in a
+ 61    directory where you have permissions (eg. your home directory) and
+ 62    unpack it:
+ 63 
+ 64      xz -cd linux-4.X.tar.xz | tar xvf -
+ 65 
+ 66    Replace "X" with the version number of the latest kernel.
+ 67 
+ 68    Do NOT use the /usr/src/linux area! This area has a (usually
+ 69    incomplete) set of kernel headers that are used by the library header
+ 70    files.  They should match the library, and not get messed up by
+ 71    whatever the kernel-du-jour happens to be.
+ 72 
+ 73  - You can also upgrade between 4.x releases by patching.  Patches are
+ 74    distributed in the xz format.  To install by patching, get all the
+ 75    newer patch files, enter the top level directory of the kernel source
+ 76    (linux-4.X) and execute:
+ 77 
+ 78      xz -cd ../patch-4.x.xz | patch -p1
+ 79 
+ 80    Replace "x" for all versions bigger than the version "X" of your current
+ 81    source tree, _in_order_, and you should be ok.  You may want to remove
+ 82    the backup files (some-file-name~ or some-file-name.orig), and make sure
+ 83    that there are no failed patches (some-file-name# or some-file-name.rej).
+ 84    If there are, either you or I have made a mistake.
+ 85 
+ 86    Unlike patches for the 4.x kernels, patches for the 4.x.y kernels
+ 87    (also known as the -stable kernels) are not incremental but instead apply
+ 88    directly to the base 4.x kernel.  For example, if your base kernel is 4.0
+ 89    and you want to apply the 4.0.3 patch, you must not first apply the 4.0.1
+ 90    and 4.0.2 patches. Similarly, if you are running kernel version 4.0.2 and
+ 91    want to jump to 4.0.3, you must first reverse the 4.0.2 patch (that is,
+ 92    patch -R) _before_ applying the 4.0.3 patch. You can read more on this in
+ 93    Documentation/applying-patches.txt
+ 94 
+ 95    Alternatively, the script patch-kernel can be used to automate this
+ 96    process.  It determines the current kernel version and applies any
+ 97    patches found.
+ 98 
+ 99      linux/scripts/patch-kernel linux
+100 
+101    The first argument in the command above is the location of the
+102    kernel source.  Patches are applied from the current directory, but
+103    an alternative directory can be specified as the second argument.
+104 
+105  - Make sure you have no stale .o files and dependencies lying around:
+106 
+107      cd linux
+108      make mrproper
+109 
+110    You should now have the sources correctly installed.
+111 
+112 SOFTWARE REQUIREMENTS
+113 
+114    Compiling and running the 4.x kernels requires up-to-date
+115    versions of various software packages.  Consult
+116    Documentation/Changes for the minimum version numbers required
+117    and how to get updates for these packages.  Beware that using
+118    excessively old versions of these packages can cause indirect
+119    errors that are very difficult to track down, so don't assume that
+120    you can just update packages when obvious problems arise during
+121    build or operation.
+122 
+123 BUILD directory for the kernel:
+124 
+125    When compiling the kernel, all output files will per default be
+126    stored together with the kernel source code.
+127    Using the option "make O=output/dir" allow you to specify an alternate
+128    place for the output files (including .config).
+129    Example:
+130 
+131      kernel source code: /usr/src/linux-4.X
+132      build directory:    /home/name/build/kernel
+133 
+134    To configure and build the kernel, use:
+135 
+136      cd /usr/src/linux-4.X
+137      make O=/home/name/build/kernel menuconfig
+138      make O=/home/name/build/kernel
+139      sudo make O=/home/name/build/kernel modules_install install
+140 
+141    Please note: If the 'O=output/dir' option is used, then it must be
+142    used for all invocations of make.
+143 
+144 CONFIGURING the kernel:
+145 
+146    Do not skip this step even if you are only upgrading one minor
+147    version.  New configuration options are added in each release, and
+148    odd problems will turn up if the configuration files are not set up
+149    as expected.  If you want to carry your existing configuration to a
+150    new version with minimal work, use "make oldconfig", which will
+151    only ask you for the answers to new questions.
+152 
+153  - Alternative configuration commands are:
+154 
+155      "make config"      Plain text interface.
+156 
+157      "make menuconfig"  Text based color menus, radiolists & dialogs.
+158 
+159      "make nconfig"     Enhanced text based color menus.
+160 
+161      "make xconfig"     X windows (Qt) based configuration tool.
+162 
+163      "make gconfig"     X windows (Gtk) based configuration tool.
+164 
+165      "make oldconfig"   Default all questions based on the contents of
+166                         your existing ./.config file and asking about
+167                         new config symbols.
+168 
+169      "make silentoldconfig"
+170                         Like above, but avoids cluttering the screen
+171                         with questions already answered.
+172                         Additionally updates the dependencies.
+173 
+174      "make olddefconfig"
+175                         Like above, but sets new symbols to their default
+176                         values without prompting.
+177 
+178      "make defconfig"   Create a ./.config file by using the default
+179                         symbol values from either arch/$ARCH/defconfig
+180                         or arch/$ARCH/configs/${PLATFORM}_defconfig,
+181                         depending on the architecture.
+182 
+183      "make ${PLATFORM}_defconfig"
+184                         Create a ./.config file by using the default
+185                         symbol values from
+186                         arch/$ARCH/configs/${PLATFORM}_defconfig.
+187                         Use "make help" to get a list of all available
+188                         platforms of your architecture.
+189 
+190      "make allyesconfig"
+191                         Create a ./.config file by setting symbol
+192                         values to 'y' as much as possible.
+193 
+194      "make allmodconfig"
+195                         Create a ./.config file by setting symbol
+196                         values to 'm' as much as possible.
+197 
+198      "make allnoconfig" Create a ./.config file by setting symbol
+199                         values to 'n' as much as possible.
+200 
+201      "make randconfig"  Create a ./.config file by setting symbol
+202                         values to random values.
+203 
+204      "make localmodconfig" Create a config based on current config and
+205                            loaded modules (lsmod). Disables any module
+206                            option that is not needed for the loaded modules.
+207 
+208                            To create a localmodconfig for another machine,
+209                            store the lsmod of that machine into a file
+210                            and pass it in as a LSMOD parameter.
+211 
+212                    target$ lsmod > /tmp/mylsmod
+213                    target$ scp /tmp/mylsmod host:/tmp
+214 
+215                    host$ make LSMOD=/tmp/mylsmod localmodconfig
+216 
+217                            The above also works when cross compiling.
+218 
+219      "make localyesconfig" Similar to localmodconfig, except it will convert
+220                            all module options to built in (=y) options.
+221 
+222    You can find more information on using the Linux kernel config tools
+223    in Documentation/kbuild/kconfig.txt.
+224 
+225  - NOTES on "make config":
+226 
+227     - Having unnecessary drivers will make the kernel bigger, and can
+228       under some circumstances lead to problems: probing for a
+229       nonexistent controller card may confuse your other controllers
+230 
+231     - Compiling the kernel with "Processor type" set higher than 386
+232       will result in a kernel that does NOT work on a 386.  The
+233       kernel will detect this on bootup, and give up.
+234 
+235     - A kernel with math-emulation compiled in will still use the
+236       coprocessor if one is present: the math emulation will just
+237       never get used in that case.  The kernel will be slightly larger,
+238       but will work on different machines regardless of whether they
+239       have a math coprocessor or not.
+240 
+241     - The "kernel hacking" configuration details usually result in a
+242       bigger or slower kernel (or both), and can even make the kernel
+243       less stable by configuring some routines to actively try to
+244       break bad code to find kernel problems (kmalloc()).  Thus you
+245       should probably answer 'n' to the questions for "development",
+246       "experimental", or "debugging" features.
+247 
+248 COMPILING the kernel:
+249 
+250  - Make sure you have at least gcc 3.2 available.
+251    For more information, refer to Documentation/Changes.
+252 
+253    Please note that you can still run a.out user programs with this kernel.
+254 
+255  - Do a "make" to create a compressed kernel image. It is also
+256    possible to do "make install" if you have lilo installed to suit the
+257    kernel makefiles, but you may want to check your particular lilo setup first.
+258 
+259    To do the actual install, you have to be root, but none of the normal
+260    build should require that. Don't take the name of root in vain.
+261 
+262  - If you configured any of the parts of the kernel as `modules', you
+263    will also have to do "make modules_install".
+264 
+265  - Verbose kernel compile/build output:
+266 
+267    Normally, the kernel build system runs in a fairly quiet mode (but not
+268    totally silent).  However, sometimes you or other kernel developers need
+269    to see compile, link, or other commands exactly as they are executed.
+270    For this, use "verbose" build mode.  This is done by inserting
+271    "V=1" in the "make" command.  E.g.:
+272 
+273      make V=1 all
+274 
+275    To have the build system also tell the reason for the rebuild of each
+276    target, use "V=2".  The default is "V=0".
+277 
+278  - Keep a backup kernel handy in case something goes wrong.  This is 
+279    especially true for the development releases, since each new release
+280    contains new code which has not been debugged.  Make sure you keep a
+281    backup of the modules corresponding to that kernel, as well.  If you
+282    are installing a new kernel with the same version number as your
+283    working kernel, make a backup of your modules directory before you
+284    do a "make modules_install".
+285 
+286    Alternatively, before compiling, use the kernel config option
+287    "LOCALVERSION" to append a unique suffix to the regular kernel version.
+288    LOCALVERSION can be set in the "General Setup" menu.
+289 
+290  - In order to boot your new kernel, you'll need to copy the kernel
+291    image (e.g. .../linux/arch/i386/boot/bzImage after compilation)
+292    to the place where your regular bootable kernel is found. 
+293 
+294  - Booting a kernel directly from a floppy without the assistance of a
+295    bootloader such as LILO, is no longer supported.
+296 
+297    If you boot Linux from the hard drive, chances are you use LILO, which
+298    uses the kernel image as specified in the file /etc/lilo.conf.  The
+299    kernel image file is usually /vmlinuz, /boot/vmlinuz, /bzImage or
+300    /boot/bzImage.  To use the new kernel, save a copy of the old image
+301    and copy the new image over the old one.  Then, you MUST RERUN LILO
+302    to update the loading map!! If you don't, you won't be able to boot
+303    the new kernel image.
+304 
+305    Reinstalling LILO is usually a matter of running /sbin/lilo. 
+306    You may wish to edit /etc/lilo.conf to specify an entry for your
+307    old kernel image (say, /vmlinux.old) in case the new one does not
+308    work.  See the LILO docs for more information. 
+309 
+310    After reinstalling LILO, you should be all set.  Shutdown the system,
+311    reboot, and enjoy!
+312 
+313    If you ever need to change the default root device, video mode,
+314    ramdisk size, etc.  in the kernel image, use the 'rdev' program (or
+315    alternatively the LILO boot options when appropriate).  No need to
+316    recompile the kernel to change these parameters. 
+317 
+318  - Reboot with the new kernel and enjoy. 
+319 
+320 IF SOMETHING GOES WRONG:
+321 
+322  - If you have problems that seem to be due to kernel bugs, please check
+323    the file MAINTAINERS to see if there is a particular person associated
+324    with the part of the kernel that you are having trouble with. If there
+325    isn't anyone listed there, then the second best thing is to mail
+326    them to me (torvalds@linux-foundation.org), and possibly to any other
+327    relevant mailing-list or to the newsgroup.
+328 
+329  - In all bug-reports, *please* tell what kernel you are talking about,
+330    how to duplicate the problem, and what your setup is (use your common
+331    sense).  If the problem is new, tell me so, and if the problem is
+332    old, please try to tell me when you first noticed it.
+333 
+334  - If the bug results in a message like
+335 
+336      unable to handle kernel paging request at address C0000010
+337      Oops: 0002
+338      EIP:   0010:XXXXXXXX
+339      eax: xxxxxxxx   ebx: xxxxxxxx   ecx: xxxxxxxx   edx: xxxxxxxx
+340      esi: xxxxxxxx   edi: xxxxxxxx   ebp: xxxxxxxx
+341      ds: xxxx  es: xxxx  fs: xxxx  gs: xxxx
+342      Pid: xx, process nr: xx
+343      xx xx xx xx xx xx xx xx xx xx
+344 
+345    or similar kernel debugging information on your screen or in your
+346    system log, please duplicate it *exactly*.  The dump may look
+347    incomprehensible to you, but it does contain information that may
+348    help debugging the problem.  The text above the dump is also
+349    important: it tells something about why the kernel dumped code (in
+350    the above example, it's due to a bad kernel pointer). More information
+351    on making sense of the dump is in Documentation/oops-tracing.txt
+352 
+353  - If you compiled the kernel with CONFIG_KALLSYMS you can send the dump
+354    as is, otherwise you will have to use the "ksymoops" program to make
+355    sense of the dump (but compiling with CONFIG_KALLSYMS is usually preferred).
+356    This utility can be downloaded from
+357    ftp://ftp.<country>.kernel.org/pub/linux/utils/kernel/ksymoops/ .
+358    Alternatively, you can do the dump lookup by hand:
+359 
+360  - In debugging dumps like the above, it helps enormously if you can
+361    look up what the EIP value means.  The hex value as such doesn't help
+362    me or anybody else very much: it will depend on your particular
+363    kernel setup.  What you should do is take the hex value from the EIP
+364    line (ignore the "0010:"), and look it up in the kernel namelist to
+365    see which kernel function contains the offending address.
+366 
+367    To find out the kernel function name, you'll need to find the system
+368    binary associated with the kernel that exhibited the symptom.  This is
+369    the file 'linux/vmlinux'.  To extract the namelist and match it against
+370    the EIP from the kernel crash, do:
+371 
+372      nm vmlinux | sort | less
+373 
+374    This will give you a list of kernel addresses sorted in ascending
+375    order, from which it is simple to find the function that contains the
+376    offending address.  Note that the address given by the kernel
+377    debugging messages will not necessarily match exactly with the
+378    function addresses (in fact, that is very unlikely), so you can't
+379    just 'grep' the list: the list will, however, give you the starting
+380    point of each kernel function, so by looking for the function that
+381    has a starting address lower than the one you are searching for but
+382    is followed by a function with a higher address you will find the one
+383    you want.  In fact, it may be a good idea to include a bit of
+384    "context" in your problem report, giving a few lines around the
+385    interesting one. 
+386 
+387    If you for some reason cannot do the above (you have a pre-compiled
+388    kernel image or similar), telling me as much about your setup as
+389    possible will help.  Please read the REPORTING-BUGS document for details.
+390 
+391  - Alternatively, you can use gdb on a running kernel. (read-only; i.e. you
+392    cannot change values or set break points.) To do this, first compile the
+393    kernel with -g; edit arch/i386/Makefile appropriately, then do a "make
+394    clean". You'll also need to enable CONFIG_PROC_FS (via "make config").
+395 
+396    After you've rebooted with the new kernel, do "gdb vmlinux /proc/kcore".
+397    You can now use all the usual gdb commands. The command to look up the
+398    point where your system crashed is "l *0xXXXXXXXX". (Replace the XXXes
+399    with the EIP value.)
+400 
+401    gdb'ing a non-running kernel currently fails because gdb (wrongly)
+402    disregards the starting offset for which the kernel is compiled.

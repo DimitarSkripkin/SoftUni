@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2013 for Windows Desktop
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Series of Letters", "01. Series of Letters\01. Series of Letters.csproj", "{4A760626-FC13-4BEE-A1ED-12CC27473D71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Replace (a) tag", "02. Replace (a) tag\02. Replace (a) tag.csproj", "{B6DB2263-D20D-4253-B24E-0D1ED73F14BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Extract Emails", "03. Extract Emails\03. Extract Emails.csproj", "{9AD3D3EF-3036-47D2-AFBD-CAAAED18D2A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Sentence Extractor", "04. Sentence Extractor\04. Sentence Extractor.csproj", "{8DA0D4EE-783A-4204-8C63-A5466BA3FB8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Valid Usernames", "05. Valid Usernames\05. Valid Usernames.csproj", "{192A570A-8C85-4920-B691-7D340CFF6D47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Extract Hyperlinks", "06. Extract Hyperlinks\06. Extract Hyperlinks.csproj", "{501CC4C7-F27E-4830-A61E-1581F01066F8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A760626-FC13-4BEE-A1ED-12CC27473D71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A760626-FC13-4BEE-A1ED-12CC27473D71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A760626-FC13-4BEE-A1ED-12CC27473D71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A760626-FC13-4BEE-A1ED-12CC27473D71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6DB2263-D20D-4253-B24E-0D1ED73F14BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6DB2263-D20D-4253-B24E-0D1ED73F14BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6DB2263-D20D-4253-B24E-0D1ED73F14BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6DB2263-D20D-4253-B24E-0D1ED73F14BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AD3D3EF-3036-47D2-AFBD-CAAAED18D2A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AD3D3EF-3036-47D2-AFBD-CAAAED18D2A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AD3D3EF-3036-47D2-AFBD-CAAAED18D2A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AD3D3EF-3036-47D2-AFBD-CAAAED18D2A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DA0D4EE-783A-4204-8C63-A5466BA3FB8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DA0D4EE-783A-4204-8C63-A5466BA3FB8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DA0D4EE-783A-4204-8C63-A5466BA3FB8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DA0D4EE-783A-4204-8C63-A5466BA3FB8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{192A570A-8C85-4920-B691-7D340CFF6D47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{192A570A-8C85-4920-B691-7D340CFF6D47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{192A570A-8C85-4920-B691-7D340CFF6D47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{192A570A-8C85-4920-B691-7D340CFF6D47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{501CC4C7-F27E-4830-A61E-1581F01066F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{501CC4C7-F27E-4830-A61E-1581F01066F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{501CC4C7-F27E-4830-A61E-1581F01066F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{501CC4C7-F27E-4830-A61E-1581F01066F8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
