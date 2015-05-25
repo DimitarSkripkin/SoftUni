@@ -1,9 +1,0 @@
-D:\VS Projects\lab 2 - algorithms\02. The Sieve of Eratosthenes\bin\Debug\_02.The_Sieve_of_Eratosthenes.exe.config
-D:\VS Projects\lab 2 - algorithms\02. The Sieve of Eratosthenes\bin\Debug\_02.The_Sieve_of_Eratosthenes.exe
-D:\VS Projects\lab 2 - algorithms\02. The Sieve of Eratosthenes\bin\Debug\_02.The_Sieve_of_Eratosthenes.pdb
-D:\VS Projects\lab 2 - algorithms\02. The Sieve of Eratosthenes\obj\Debug\02. The Sieve of Eratosthenes.csprojResolveAssemblyReference.cache
-D:\VS Projects\lab 2 - algorithms\02. The Sieve of Eratosthenes\obj\Debug\_02.The_Sieve_of_Eratosthenes.exe
-D:\VS Projects\lab 2 - algorithms\02. The Sieve of Eratosthenes\obj\Debug\_02.The_Sieve_of_Eratosthenes.pdb
-C:\Users\ACER ASPIRE\Desktop\cloned homework\SoftUni\Teamwork\01. Source Control Systems\lab 2 - algorithms\02. The Sieve of Eratosthenes\bin\Debug\_02.The_Sieve_of_Eratosthenes.exe.config
-C:\Users\ACER ASPIRE\Desktop\cloned homework\SoftUni\Teamwork\01. Source Control Systems\lab 2 - algorithms\02. The Sieve of Eratosthenes\obj\Debug\_02.The_Sieve_of_Eratosthenes.exe
-C:\Users\ACER ASPIRE\Desktop\cloned homework\SoftUni\Teamwork\01. Source Control Systems\lab 2 - algorithms\02. The Sieve of Eratosthenes\obj\Debug\_02.The_Sieve_of_Eratosthenes.pdb
