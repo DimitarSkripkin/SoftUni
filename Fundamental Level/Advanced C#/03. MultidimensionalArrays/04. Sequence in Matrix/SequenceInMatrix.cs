@@ -41,27 +41,45 @@ class SequenceInMatrix
 
 	static int GetLenghtOfTheLongestSequence(string[,] arr, int row, int col)
 	{
-		int maxLenght = 1;
+		int maxLenght = 1, tempLen = 1;
 
-		maxLenght += GetLenghtOfTheLongestSequenceInGivenDirection(arr, row, col, 0, 1);
-		maxLenght += GetLenghtOfTheLongestSequenceInGivenDirection(arr, row, col, 0, -1);
-		maxLenght += GetLenghtOfTheLongestSequenceInGivenDirection(arr, row, col, 1, 0);
-		maxLenght += GetLenghtOfTheLongestSequenceInGivenDirection(arr, row, col, -1, 0);
+		tempLen += GetLenghtOfTheLongestSequenceInGivenDirection(arr, row, col, 0, 1);
+		tempLen += GetLenghtOfTheLongestSequenceInGivenDirection(arr, row, col, 0, -1);
+		maxLenght = tempLen;
 
-		maxLenght += GetLenghtOfTheLongestSequenceInGivenDirection(arr, row, col, 1, 1);
-		maxLenght += GetLenghtOfTheLongestSequenceInGivenDirection(arr, row, col, -1, -1);
-		maxLenght += GetLenghtOfTheLongestSequenceInGivenDirection(arr, row, col, 1, -1);
-		maxLenght += GetLenghtOfTheLongestSequenceInGivenDirection(arr, row, col, -1, 1);
+		tempLen = 1;
+		tempLen += GetLenghtOfTheLongestSequenceInGivenDirection(arr, row, col, 1, 0);
+		tempLen += GetLenghtOfTheLongestSequenceInGivenDirection(arr, row, col, -1, 0);
+		if (tempLen > maxLenght)
+		{
+			maxLenght = tempLen;
+		}
+
+		tempLen = 1;
+		tempLen += GetLenghtOfTheLongestSequenceInGivenDirection(arr, row, col, 1, 1);
+		tempLen += GetLenghtOfTheLongestSequenceInGivenDirection(arr, row, col, -1, -1);
+		if (tempLen > maxLenght)
+		{
+			maxLenght = tempLen;
+		}
+
+		tempLen = 1;
+		tempLen += GetLenghtOfTheLongestSequenceInGivenDirection(arr, row, col, 1, -1);
+		tempLen += GetLenghtOfTheLongestSequenceInGivenDirection(arr, row, col, -1, 1);
+		if (tempLen > maxLenght)
+		{
+			maxLenght = tempLen;
+		}
 
 		return maxLenght;
 	}
 /*test
-5 5
-ha fifi ho hi e
-fo ha hi xx dsa
-xxx ho ha xx s
-s s qq p m
-d a xx e ha
+5 6
+ha fifi ho hi e hi
+fo ha ha hi xx dsa
+xxx ho ha xx s hi
+s s qq p m ho
+d a xx e ha he
 
 3 4
 ha fifi ho hi

@@ -7,19 +7,17 @@ using System.Threading.Tasks;
 
 class TerroristsWin
 {
-	static int CalculateSum( string str, int leftIndex, int rightIndex ) {
+	static int CalculateSum(char[] arr, int leftIndex, int rightIndex)
+	{
+		if (rightIndex > arr.Length)
+		{
+			rightIndex = arr.Length;
+		}
+
 		int sum = 0;
-		if (leftIndex < 0)
-		{
-			leftIndex = 0;
-		}
-		if (rightIndex > str.Length)
-		{
-			rightIndex = str.Length;
-		}
 		for (int i = leftIndex; i < rightIndex; ++i)
 		{
-			sum += str[i];
+			sum += arr[i];
 		}
 		return sum % 10;
 	}
@@ -34,6 +32,7 @@ class TerroristsWin
 		{
 			rightIndex = arr.Length;
 		}
+
 		for (int i = leftIndex; i < rightIndex; ++i)
 		{
 			arr[i] = c;
@@ -52,9 +51,13 @@ class TerroristsWin
 			rightIndex = input.IndexOf('|', leftIndex + 1);
 
 		char[] blownMap = input.ToArray();
-		while (leftIndex > 0 && rightIndex > 0)
+		while (leftIndex >= 0)
 		{
-			int power = CalculateSum(input, leftIndex+1, rightIndex);
+			if (rightIndex < 0)
+			{
+				rightIndex = blownMap.Length;
+			}
+			int power = CalculateSum(blownMap, leftIndex + 1, rightIndex);
 			SetCharAtRange(blownMap, '.', leftIndex - power, rightIndex + power + 1);
 
 			leftIndex = input.IndexOf('|', rightIndex + 1);
