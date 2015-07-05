@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2013 for Windows Desktop
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Custom LINQ Extension Methods", "01. Custom LINQ Extension Methods\01. Custom LINQ Extension Methods.csproj", "{42562EC9-B7B9-4385-A4F0-7071B8A430E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Interest Calculator", "02. Interest Calculator\02. Interest Calculator.csproj", "{1E38074C-92C9-4E0A-82CC-A483CE7AFB22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Asynchronous Timer", "03. Asynchronous Timer\03. Asynchronous Timer.csproj", "{84FA8EDE-6403-46BA-A18B-F2FED3213509}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Student Class", "04. Student Class\04. Student Class.csproj", "{32252197-734D-4150-A362-454B0B4A1F22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42562EC9-B7B9-4385-A4F0-7071B8A430E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42562EC9-B7B9-4385-A4F0-7071B8A430E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42562EC9-B7B9-4385-A4F0-7071B8A430E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42562EC9-B7B9-4385-A4F0-7071B8A430E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E38074C-92C9-4E0A-82CC-A483CE7AFB22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E38074C-92C9-4E0A-82CC-A483CE7AFB22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E38074C-92C9-4E0A-82CC-A483CE7AFB22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E38074C-92C9-4E0A-82CC-A483CE7AFB22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84FA8EDE-6403-46BA-A18B-F2FED3213509}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84FA8EDE-6403-46BA-A18B-F2FED3213509}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84FA8EDE-6403-46BA-A18B-F2FED3213509}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84FA8EDE-6403-46BA-A18B-F2FED3213509}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32252197-734D-4150-A362-454B0B4A1F22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32252197-734D-4150-A362-454B0B4A1F22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32252197-734D-4150-A362-454B0B4A1F22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32252197-734D-4150-A362-454B0B4A1F22}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
